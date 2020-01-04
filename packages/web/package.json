@@ -1,5 +1,5 @@
 {
-  "name": "jpdiary",
+  "name": "rudiary",
   "version": "1.0.0",
   "description": "私の日本語日記と旅…",
   "author": "Pacharapol Withayasakpunt",
@@ -13,10 +13,18 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.3.6",
     "@nuxtjs/axios": "^5.3.6",
+    "@patarapolw/deepfind": "^0.1.5",
+    "@types/showdown": "^1.9.3",
     "nuxt": "^2.0.0",
-    "nuxt-buefy": "^0.3.2"
+    "nuxt-buefy": "^0.3.2",
+    "nuxt-property-decorator": "^2.5.0",
+    "showdown": "^1.9.1"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.5.5"
+    "@nuxt/typescript-build": "^0.5.5",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass": "^1.24.2",
+    "sass-loader": "^8.0.0"
   }
 }

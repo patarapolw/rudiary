@@ -1,4 +1,8 @@
 import { Configuration } from '@nuxt/types'
+import deepfind from '@patarapolw/deepfind'
+import showdown from 'showdown'
+
+const mdConverter = new showdown.Converter()
 
 const config: Configuration = {
   mode: 'universal',
@@ -59,6 +63,12 @@ const config: Configuration = {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+      for (const r of deepfind(config, 'pug-plain-loader')) {
+        r.options = r.options || {}
+        r.options.filters = {
+          markdown: (s: string) => mdConverter.makeHtml(s)
+        }
+      }
     }
   }
 }
