@@ -64,9 +64,11 @@ const config: Configuration = {
     */
     extend (config, ctx) {
       for (const r of deepfind(config, 'pug-plain-loader')) {
-        r.options = r.options || {}
-        r.options.filters = {
-          markdown: (s: string) => mdConverter.makeHtml(s)
+        if (!Array.isArray(r)) {
+          r.options = r.options || {}
+          r.options.filters = {
+            markdown: (s: string) => mdConverter.makeHtml(s)
+          }
         }
       }
     }
