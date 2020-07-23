@@ -11,7 +11,7 @@
     "generate": "nuxt-ts generate"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.3.6",
+    "@nuxt/typescript-runtime": "^0.4.10",
     "@nuxtjs/axios": "^5.3.6",
     "@patarapolw/deepfind": "^0.1.5",
     "@types/showdown": "^1.9.3",
